@@ -1,0 +1,104 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+    // Header
+    .profile-header {
+        padding: 2rem 1rem 4rem 1rem;
+        background-color: $red;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .profile-picture {
+            width: auto;
+            display: flex;
+            justify-content: center;
+            .picture-container {
+                width: 150px;
+                overflow: hidden;
+                border-radius: 50%;
+                height: 150px;
+                display: flex;
+                border: 3px solid #fff;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                justify-content: center;
+                transition: all ease-in-out 0.4s;
+                &:hover {
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+                img {
+                    transition: transform ease-in-out 0.4s;
+                    height: 150px;
+                    width: auto;
+                }
+            }
+        }
+        .info-container {
+            width: auto;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            h2 {}
+            .role {
+                text-transform: uppercase;
+            }
+        }
+    }
+    //Body
+    .profile-info {
+        display: flex;
+        width: 92%;
+        margin: auto;
+        border-radius: 10px;
+        margin-top: -2.5rem;
+        flex-wrap: wrap;
+        padding: 0.5rem 1rem 2rem 1rem;
+        background-color: #fff;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+        .info-header {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            .icon {
+                i {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        .break {
+            width: 100%;
+            color: red;
+        }
+        .info-body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .info-field {
+                width: auto;
+                margin: 0 2rem;
+            }
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .profile-header {
+            .profile-picture {
+                .picture-container {
+                    height: 120px;
+                    width: 120px;
+                    img {
+                        height: 120px;
+                    }
+                }
+            }
+        }
+        .profile-info {
+            width: 85%;
+        }
+    }
+}
